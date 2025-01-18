@@ -8,5 +8,4 @@ class LabelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Labels
         fields = ['id', 'name', 'owner']
-        unique_together =  ('name', 'owner')
         
