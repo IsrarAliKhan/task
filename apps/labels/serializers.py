@@ -1,12 +1,12 @@
 from rest_framework import serializers
 
-from apps.labels.models import Label
+from apps.labels.models import Labels
 
 class LabelSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')    
     
     class Meta:
-        model = Label
+        model = Labels
         fields = ['id', 'name', 'owner']
         unique_together =  ('name', 'owner')
         
