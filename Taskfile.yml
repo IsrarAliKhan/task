@@ -1,0 +1,24 @@
+version: '3'
+
+tasks:
+  setup:
+    desc: "Install Dependencies"
+    cmds:
+      - pipenv install
+      - pipenv shell
+  
+  migrate:
+    desc: "Run Migrations"
+    cmds:
+      - python manage.py makemigrations
+      - python manage.py migrate
+
+  user:
+    desc: "Create Super User"
+    cmds:
+      - python manage.py createsuperuser
+  
+  run:
+    desc: "Run Application"
+    cmds:
+      - python manage.py runserver
