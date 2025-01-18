@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-djangorestframework = "*"
-drf-spectacular = "*"
-djangorestframework-simplejwt = "*"
+djangorestframework = "==3.15.1"
+drf-spectacular = "==0.28.0"
+djangorestframework-simplejwt = "==5.3.0"
 
 [dev-packages]
 
