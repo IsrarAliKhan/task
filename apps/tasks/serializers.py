@@ -2,11 +2,11 @@ from rest_framework import serializers
 
 from apps.tasks.models import Tasks
 from apps.labels.models import Labels
-from apps.labels.serializers import LabelSerializer
+from apps.labels.serializers import LabelNameSerializer
 
 class TaskSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source="owner.username")
-    labels = LabelSerializer(read_only=True, many=True)
+    labels = LabelNameSerializer(read_only=True, many=True)
     label_ids = serializers.PrimaryKeyRelatedField(queryset=Labels.objects.all(), write_only=True, many=True, source="labels")
     
     class Meta:
