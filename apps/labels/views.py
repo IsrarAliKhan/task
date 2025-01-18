@@ -4,7 +4,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 
 from apps.labels.models import Labels
 from apps.labels.serializers import LabelSerializer
-from apps.labels.permissions import IsOwner
+from apps.common.permissions import IsOwner
 
 class LabelViewSet(viewsets.ModelViewSet):
     queryset = Labels.objects.all()
