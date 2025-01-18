@@ -1,0 +1,8 @@
+.gitignore
+*.md
+Pipfile
+Pipfile.*
+Dockerfile
+docker-compose.yml
+Taskfile.yml
+db.*
