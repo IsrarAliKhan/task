@@ -5,6 +5,7 @@
 - Python >= 3.7 [⤴](https://www.python.org/downloads/release/python-370/)
 - Pipenv [⤴](https://pipenv.pypa.io/en/latest/installation.html)
 - Taskfile [⤴](https://taskfile.dev/installation/)
+- Create `.env` from `.env.sample`
 
 ## Local Setup
 
@@ -46,8 +47,6 @@
     docker-compose down
     ```
 
-> __Note:__ Remeber to create a super user for login
-
 ## Project Structure
 
 ```shell
@@ -78,11 +77,11 @@
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
+├── .env.sample
 ├── Dockerfile
 ├── Pipfile
-├── Pipfile.lock
+├── README.md
 ├── Taskfile.yml
-├── challenge.md
 ├── docker-compose.yml
 ├── manage.py
 └── requirements.txt
