@@ -2,6 +2,11 @@ version: '3.9'
 
 services:
   api:
-    build: .
+    build:
+      context: .
+      args:
+        DJANGO_SUPERUSER_PASSWORD: $DJANGO_SUPERUSER_PASSWORD
+        DJANGO_SUPERUSER_EMAIL: $DJANGO_SUPERUSER_EMAIL
+        DJANGO_SUPERUSER_USERNAME: $DJANGO_SUPERUSER_USERNAME
     ports:
-      - "8000:8000"
+      - "${DJANGO_PORT}:8000"

@@ -1,5 +1,7 @@
 version: '3'
 
+dotenv: ['.env']
+
 tasks:
   setup:
     desc: "Install Dependencies"
@@ -16,9 +18,9 @@ tasks:
   user:
     desc: "Create Super User"
     cmds:
-      - python manage.py createsuperuser
+      - python manage.py createsuperuser --noinput --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL
   
   run:
     desc: "Run Application"
     cmds:
-      - python manage.py runserver
+      - python manage.py runserver $DJANGO_PORT

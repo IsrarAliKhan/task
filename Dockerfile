@@ -2,14 +2,19 @@ FROM python:3.7-slim
 
 WORKDIR /app
 
+ARG DJANGO_SUPERUSER_USERNAME
+ARG DJANGO_SUPERUSER_EMAIL
+ARG DJANGO_SUPERUSER_PASSWORD
+
 COPY requirements.txt /app/requirements.txt
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . /app/
 
 RUN python manage.py makemigrations
 RUN python manage.py migrate
+RUN python3 manage.py createsuperuser --noinput --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL
 
 EXPOSE 8000
 
