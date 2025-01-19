@@ -1,5 +1,5 @@
 .env
-db.sqlite3
-Pipfile.lock
 .vscode
+*.sqlite3
+Pipfile.lock
 __pycache__

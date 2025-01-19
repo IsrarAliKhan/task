@@ -1,8 +1,10 @@
+.vscode
 .gitignore
-*.md
+__pycache__
 Pipfile
 Pipfile.*
 Dockerfile
 docker-compose.yml
 Taskfile.yml
 db.*
+*.md
