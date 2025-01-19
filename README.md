@@ -47,6 +47,12 @@
     docker-compose down
     ```
 
+## Swagger Endpoint
+
+```shell
+ http://<host>:<port>/api/schema/swagger-ui/
+ ```
+
 ## Project Structure
 
 ```shell
